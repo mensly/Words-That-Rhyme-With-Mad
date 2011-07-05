@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="buttonText">Y U SO...</string>
+    <string name="app_name">Words That Rhyme With Mad</string>
+    <string name="dialogTitle">Y U SO:</string>
+    <string name="closeBox">COOL STORY BRO</string>
+    <string name="madfile">mad.txt</string>
+    <string name="help">PROBLEM?</string>
+    <string name="backButton">Back</string>
+    <string name="helpText"> OH GOD HOW DID THIS GET HERE I\'M NOT GOOD WITH ANDROID\n
+    I DON\'T EVEN\n  
+    \"mad.txt\" ROOT OF SD CARD, OVERRIDE DEFAULT\n
+    I AM VERY TIRED\n
+    A SHAD IS A TYPE OF FISH
+    </string>
+</resources>
