@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Environment;
@@ -29,8 +30,11 @@ public class RhymeWithMad extends Activity {
 	private Random mRand;
 	private int mPrevMsg;
 	private int mCurrMsg;
-	
-	public void readWords()
+
+	public void readWords() {
+		mWordArray = getWordArray(mRes, this.getAssets());
+	}
+	public static String[] getWordArray(Resources mRes, AssetManager assets)
 	{
 		ArrayList<String> wordList = new ArrayList<String>();
 		BufferedReader br = null;
@@ -52,12 +56,12 @@ public class RhymeWithMad extends Activity {
 				}
 				else
 				{
-					inStream = getAssets().open(madfile);
+					inStream = assets.open(madfile);
 				}
 			}
 			else
 			{
-				inStream = getAssets().open(madfile);
+				inStream = assets.open(madfile);
 
 			}
 			br = new BufferedReader(new InputStreamReader(inStream));
@@ -85,8 +89,7 @@ public class RhymeWithMad extends Activity {
 		if (wordList.isEmpty())
 			wordList.add("mad");
 
-		mWordArray = new String[wordList.size()];
-		wordList.toArray(mWordArray);
+		return wordList.toArray(new String[0]);
 	}
 	
 	
